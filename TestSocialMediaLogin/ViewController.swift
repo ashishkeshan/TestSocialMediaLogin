@@ -50,7 +50,7 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInUIDelegate
         GGLContext.sharedInstance().configureWithError(&error)
         
         if error != nil {
-            print(error)
+            print(error ?? "error")
             return
         }
         
