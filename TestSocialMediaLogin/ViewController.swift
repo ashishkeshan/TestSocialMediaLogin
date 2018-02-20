@@ -12,6 +12,7 @@ import FacebookLogin
 import SwiftyJSON
 import GoogleSignIn
 import Google
+import TwitterKit
 
 class ViewController: UIViewController, LoginButtonDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
 
@@ -60,8 +61,19 @@ class ViewController: UIViewController, LoginButtonDelegate, GIDSignInUIDelegate
         GIDSignIn.sharedInstance().scopes = currentScopes.adding(scope)
         
         let googleSignInButton = GIDSignInButton()
-        googleSignInButton.center = CGPoint(x: view.center.x, y: view.center.y + 200)
+        googleSignInButton.center = CGPoint(x: view.center.x, y: view.center.y + 125)
         view.addSubview(googleSignInButton)
+        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
+            if (session != nil) {
+                print("signed in as: ", (session?.userName)!);
+                print("USER ID: ", (session?.userID)!)
+            } else {
+                print("error: \(String(describing: error?.localizedDescription))");
+            }
+        })
+        logInButton.center = CGPoint(x: view.center.x, y: view.center.y + 200)
+
+        self.view.addSubview(logInButton)
         // Do any additional setup after loading the view, typically from a nib.
     }
     

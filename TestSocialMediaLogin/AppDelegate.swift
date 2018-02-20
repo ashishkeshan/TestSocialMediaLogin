@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //added these 3 methods
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        TWTRSession.sharedInstance().start(withConsumerKey:"bMokHRviP5isA9yB98A6AzPBB", consumerSecret:"rS0MqlMezni8bXpy2bYvniRwNofiQ2NSwmB1A0XrCN5XFd7ehB")
+        TWTRTwitter.sharedInstance().start(withConsumerKey:"bMokHRviP5isA9yB98A6AzPBB", consumerSecret:"rS0MqlMezni8bXpy2bYvniRwNofiQ2NSwmB1A0XrCN5XFd7ehB")
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url as URL!, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        return GIDSignIn.sharedInstance().handle(url as URL!, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation]) || TWTRTwitter.sharedInstance().application(app, open: url, options: options)
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

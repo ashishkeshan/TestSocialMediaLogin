@@ -28,6 +28,7 @@
 		7585EC1920278C2D009B757E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7585EC1B20278C2D009B757E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7585EC2120278C78009B757E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		75A5FF38203BD39B00B879EB /* TestSocialMediaLogin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestSocialMediaLogin-Bridging-Header.h"; sourceTree = "<group>"; };
 		CDE7709114ED7E2DF0686C77 /* Pods_TestSocialMediaLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestSocialMediaLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC03082558BFD480AE85F103 /* Pods-TestSocialMediaLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSocialMediaLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSocialMediaLogin/Pods-TestSocialMediaLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +68,7 @@
 			children = (
 				753B4351203A321300AF7054 /* GoogleService-Info.plist */,
 				7585EC0F20278C2D009B757E /* AppDelegate.swift */,
+				75A5FF38203BD39B00B879EB /* TestSocialMediaLogin-Bridging-Header.h */,
 				7585EC1120278C2D009B757E /* ViewController.swift */,
 				7585EC1320278C2D009B757E /* Main.storyboard */,
 				7585EC2120278C78009B757E /* Constants.swift */,
@@ -398,7 +400,7 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashishkeshan.TestSocialMediaLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestSocialMediaLogin/TestSocialMediaLogin-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,7 +419,7 @@
 				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashishkeshan.TestSocialMediaLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestSocialMediaLogin/TestSocialMediaLogin-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
